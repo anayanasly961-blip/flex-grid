@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flexbox -Grid</title>
+</head>
+<body>
+
+    <!-- PUNTO 1-->
+    <header>
+        <img src="./imagen/codeacademypro_logo.png" alt="logo" class="logo">
+        <div class="header-links">
+        <nav>
+           <a href="#">Inicio</a>
+           <a href="#">Cursos</a>
+           <a href="#">Proyectos</a>
+           <a href="#">Comunidad</a>
+        </nav>
+        <button type="button" class="uno">Iniciar sesión</button>
+        <button type="button" class="dos">Registrarse</button>
+        </div>
+    </header>
+
+    <!-- PUNTO 2-->
+      <main class="seccion-cursos">
+    <h2 class="curso">Cursos Disponibles</h2>
+   <!-- tarjeta 1-->
+      <div class="grid-cursos">
+    <article class="tarjeta">
+      <img src="./imagen/im1.jpg" alt="Curso de HTML y CSS">
+      <div class="tarjeta-contenido">
+        <span class="categoria">Desarrollo Web</span>
+        <h3>HTML5 y CSS3 Moderno</h3>
+        <p class="descripcion">Aprende a maquetar sitios web profesionales utilizando las últimas tecnologías.</p>
+        <span class="nivel">Nivel: Principiante</span>
+        <button class="btn-curso" type="button">Ver curso</button>
+         </div>
+          </article>
+    
+       <!-- tarjeta 2-->
+
+    <article class="tarjeta">
+      <img src="./imagen/ciber.jpg" alt="Curso de ciberseguridad">
+      <div class="tarjeta-contenido">
+        <span class="categoria">Infraestructura y Seguridad</span>
+        <h3>Ciberseguridad</h3>
+        <p class="descripcion">Aprende a proteger sistemas y redes contra amenazas digitales.</p>
+        <span class="nivel">Nivel: Avanzado</span>
+        <button class="btn-curso" type="button">Ver curso</button>
+      </div>
+    </article>
+       
+
+
+    <article class="tarjeta">
+      <img src="./imagen/cience.jpg" alt="Curso de HTML y CSS">
+      <div class="tarjeta-contenido">
+        <span class="categoria">Datos y Analítica</span>
+        <h3>Ciencia de Datos</h3>
+        <p class="descripcion">Aprende a analizar y visualizar datos utilizando herramientas modernas.</p>
+        <span class="nivel">Nivel: Principiante</span>
+        <button class="btn-curso" type="button">Ver curso</button>
+      </div>
+    </article>
+        
+    <article class="tarjeta">
+      <img src="./imagen/Desing.jpg" alt="Curso de HTML y CSS">
+      <div class="tarjeta-contenido">
+        <span class="categoria">Creatividad Digital</span>
+        <h3>Diseño Gráfico</h3>
+        <p class="descripcion">Aprende a crear diseños visuales atractivos utilizando herramientas modernas.</p>
+        <span class="nivel">Nivel: Avanzado</span>
+        <button class="btn-curso" type="button">Ver curso</button>
+      </div>
+    </article>
+       
+
+  
+       <article class="tarjeta">
+      <img src="./imagen/ing.webp" alt="Curso de HTML y CSS">
+      <div class="tarjeta-contenido">
+        <span class="categoria">Desarrollo Web</span>
+        <h3>Ingeniería de Software</h3>
+        <p class="descripcion">Aprende a desarrollar software de calidad utilizando mejores prácticas.</p>
+        <span class="nivel">Nivel: Intermedio</span>
+        <button class="btn-curso" type="button">Ver curso</button>
+      </div>
+    </article>
+      
+
+      
+      <article class="tarjeta">
+      <img src="./imagen/Analitics.jpg" alt="Curso de HTML y CSS">
+      <div class="tarjeta-contenido">
+        <span class="categoria">Datos y Analítica</span>
+        <h3>Análisis de Datos</h3>
+        <p class="descripcion">Aprende a analizar y visualizar datos utilizando herramientas modernas   .</p>
+        <span class="nivel">Nivel: Experimentado</span>
+        <button class="btn-curso" type="button">Ver curso</button>
+      </div>
+    </article>
+      
+
+  
+    <article class="tarjeta">
+      <img src="./imagen/Python.jpg" alt="Curso de HTML y CSS">
+      <div class="tarjeta-contenido">
+        <span class="categoria">Desarrollo Web</span>
+        <h3>Programación en Python</h3>
+        <p class="descripcion">Aprende a programar en Python y desarrollar aplicaciones modernas.</p>
+        <span class="nivel">Nivel: Intermedio</span>
+        <button class="btn-curso" type="button">Ver curso</button>
+      </div>
+    </article>
+       
+
+    <article class="tarjeta">
+      <img src="./imagen/IA.jpg" alt="Curso de HTML y CSS">
+      <div class="tarjeta-contenido">
+        <span class="categoria">IA</span>
+        <h3>Inteligencia Artificial</h3>
+        <p class="descripcion">Aprende a desarrollar aplicaciones de inteligencia artificial utilizando las últimas tecnologías.</p>
+        <span class="nivel">Nivel: Avanzado</span>
+        <button class="btn-curso" type="button">Ver curso</button>
+      </div>
+    </article>
+        </div>
+</main>
+
+ <!-- PUNTO 3: DASHBOARD ADMINISTRATIVO -->
+<section class="general-container">
+  
+  <header class="header">
+    <h1>Panel de gestión académica</h1>
+    <div class="perfil">👨🏻‍💼 Admin User</div>
+  </header>
+
+  <aside class="sidebar">
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Estudiantes</a>
+      <a href="#">Cursos</a>
+      <a href="#">Docentes</a>
+      <a href="#">Reportes</a>
+      <a href="#">Configuración</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <!-- 4 Tarjetas de Indicadores -->
+    <div class="container">
+      <div class="card">Estudiantes: 1,250</div>
+      <div class="card">Cursos Activos: 34</div>
+      <div class="card">Docentes: 18</div>
+      <div class="card">Tasa Aprobación: 92%</div>
+    </div>
+
+    <!-- Tabla de Estudiantes -->
+    <div class="seccion-tabla">
+      <h3>Estudiantes Recientes</h3>
+      <table>
+          <tr>
+            <th>Nombre</th>
+            <th>Curso</th>
+            <th>Estado</th></tr>
+      
+        
+          <tr>
+            <td>Carlos Pérez</td>
+            <td>HTML/CSS</td>
+            <td>Activo</td>
+          </tr>
+          <tr>
+            <td>Maria Gómez</td>
+            <td>Python</td>
+            <td>Pendiente</td>
+          </tr>
+       
+      </table>
+    </div>
+
+    <!-- Actividades Recientes -->
+    <div class="seccion-actividades">
+      <h3>Actividades Recientes</h3>
+      <p> Carlos entregó la tarea de Flexbox.</p>
+      <p> María se inscribió en Ciberseguridad.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 CodeAcademy Pro - Panel Administrativo</p>
+  </footer>
+
+</section>
+
+<!-- PUNTO 4-- GALERIA EDITORIAL DE NOTICIAS-->
+<section class="tecnologia">
+  <h2>Galeria Editorial</h2>
+  <p>Explora las últimas noticias que rondan en la industria tecnológica.</p>
+  <!-- Noticia 1 -->
+
+  <div class="galeria">
+    
+    <article class=" article-not grande">
+      <img src="./imagen/mnewmodels.avif" alt="Noticia 1">
+      <div class="contenido2">
+        <span class="categoria-noticia">Inteligencia Artificial</span>
+        <h3>El impacto de los nuevos modelos de IA en el desarrollo web</h3>
+        <span class="fecha">16 August 2026</span>
+      </div>
+</article>
+  <!-- Noticia 2 -->
+    <article class=" article-not ancha">
+      <img src="./imagen/noticia2.jpg" alt="Noticia 2">
+      <div class="contenido2">
+        <span class="categoria-noticia">Ciberseguridad</span>
+        <h3>Nuevas estrategias de protección en entornos Cloud</h3>
+        <span class="fecha">15 Sept 2026</span>
+      </div>
+</article>
+<!-- Noticia 3 -->
+    <article class=" article-not larga">
+      <img src="./imagen/noticia3.jpg" alt="Noticia 3">
+      <div class="contenido2">
+        <span class="categoria-noticia">Ciencia de Datos</span>
+        <h3>Visualización masiva de datos en tiempo real</h3>
+        <span class="fecha">15 May 2026</span>
+      </div>
+</article>
+<!-- Noticia 4 -->
+  <article class="article-not">
+      <img src="./imagen/noticia4.jpg" alt="Noticia 4">
+      <div class="contenido2">
+        <span class="categoria-noticia">Diseño</span>
+        <h3>Tendencias de UI/UX en 2026</h3>
+        <span class="fecha"> 13 sep 2026</span>
+      </div>
+</article>
+<!-- Noticia 5 -->
+  <article class="article-not">
+      <img src="./imagen/noticia5.jpg" alt="Noticia 4">
+      <div class="contenido2">
+        <span class="categoria-noticia">Ingeniería</span>
+        <h3>Buenas prácticas de clean code</h3>
+        <span class="fecha"> 12 sept 2026</span>
+      </div>
+</article>
+<!-- Noticia 6 -->
+  <article class="article-not">
+      <img src="./imagen/noticia6.jpg" alt="Noticia 4">
+      <div class="contenido2">
+        <span class="categoria-noticia">Analítica</span>
+        <h3>Métricas avanzadas para productos digitales</h3>
+        <span class="fecha"> 10 sep 2026</span>
+      </div>
+</article>
+<!-- Noticia 7 -->
+  <article class="article-not">
+      <img src="./imagen/noticia7.jpg" alt="Noticia 4">
+      <div class="contenido2">
+        <span class="categoria-noticia">Programación</span>
+        <h3>Optimizaciones en Python moderno</h3>
+        <span class="fecha"> 28 sep 2026</span>
+      </div>
+</article>
+<!-- Noticia 8 -->
+  <article class="article-not">
+      <img src="./imagen/noticia8.jpg" alt="Noticia 4">
+      <div class="contenido2">
+        <span class="categoria-noticia">Automatización</span>
+        <h3>Workflows inteligentes con redes neuronales</h3>
+        <span class="fecha"> 9 sep 2026</span>
+      </div>
+</article>
+<!-- Noticia 9 -->
+  <article class="article-not">
+      <img src="./imagen/nnoticia9.jpg" alt="Noticia 4">
+      <div class="contenido2">
+        <span class="categoria-noticia">Frontend</span>
+        <h3>Domina CSS Grid y Flexbox a fondo</h3>
+        <span class="fecha">5 sep 2026</span>
+      </div>
+</article>
+<!-- Noticia 10 -->
+  <article class="article-not">
+      <img src="./imagen/noticia10.jpg" alt="Noticia 4">
+      <div class="contenido2">
+        <span class="categoria-noticia">Redes</span>
+        <h3>Infraestructuras distribuidas de alta disponibilidad</h3>
+        <span class="fecha"> 2 sep 2026</span>
+      </div>
+</article>
+</div>
+</section>
+
+  <!-- PUNTO 5: PÁGINA DE PRODUCTO-->
+<h1 class="pag">Página Producto</h1>
+      <section class="principal">
+  <div class="contenedor-producto">
+    
+    <!-- Columna Izquierda: Galería -->
+    <div class="galeriap">
+      <div class="imagen-principal">
+        <img src="./imagen/portatil.jpg" alt="Portátil Pro Max 16 pulgadas">
+      </div>
+      <div class="miniaturas">
+        <img src="./imagen/audifono.jpg" alt="audifonos inalámbricos">
+        <img src="./imagen/glasses.jpg" alt="Gafas premium">
+        <img src="./imagen/telefono.avif" alt="Celular de última generación">
+        <img src="./imagen/reloj.webp" alt="apple watch">
+      </div>
+    </div>
+
+    <!-- Columna Derecha: Información del Producto -->
+    <div class="producto-info">
+      <span class="marca">MARCA: <strong>TOSHIBA</strong></span>
+      <h2>Laptop Pro Toshiba 16 - M3 Max</h2>
+      
+      <!-- Calificación y Precios separados -->
+      <div class="calificacion">
+        <span class="estrella-media">⭐⭐⭐⭐⭐</span>
+        <span class="promedio">4.8</span>
+        <span class="resenas">(128 opiniones)</span>
+      </div>
+
+      <div class="precios">
+        <span class="precio-actual">$1,999 USD</span>
+        <span class="precio-anterior">$2,299 USD</span>
+      </div>
+
+      <p class="descripcion">Ideal para gaming, diseño y trabajo pesado. Pantalla Full HD y batería que te acompaña todo el día.</p>
+      
+      <!-- Especificaciones Técnicas -->
+      <div class="especificaciones">
+        <h4>Especificaciones Técnicas</h4>
+        <ul>
+          <li>Procesador: 12-Core CPU</li>
+          <li>Memoria RAM: 32 GB Unified</li>
+          <li>Almacenamiento: 1 TB SSD NVMe</li>
+        </ul>
+      </div>
+
+      <!-- Opciones de Compra -->
+      <div class="opciones">
+        <div class="selector-opcion">
+          <label>Color:</label>
+          <select id="color">
+            <option>Black</option>
+            <option>Purple</option>
+            <option>Light Gold</option>
+            <option>Starlight White</option>
+          </select>
+        </div>
+        <div class="selector-opcion">
+          <label>Cantidad:</label>
+          <input type="number" id="cantidad" value="1" min="1" max="10">
+        </div>
+      </div>
+
+      <!-- Botones de Acción -->
+      <div class="botones">
+        <button class="btn-comprar">Comprar Ahora</button>
+        <button class="btn-carrito">Agregar al Carrito</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Punto 6 : CALENDARIO MENSUAL-->
+
+<section class="contenedor-calendario">
+  <header class="opcion-mes">
+    <button class="boton-head">Mes Anterior</button>
+    <h2 class="mes">Septiembre 2026</h2>
+    <button class="boton-head">Mes Siguiente</button>
+    </header>
+
+    <!--celdas de nombres de los días-->
+    <div class="calendario">
+      <div class="nom">Lun</div>
+      <div class="nom">Mar</div>
+      <div class="nom">Mier</div>
+      <div class="nom">Jue</div>
+      <div class="nom">Vie</div>
+      <div class="finded">Sáb</div>
+      <div class="finded">Dom</div>
+     
+      <!--celdas de los dias-->
+       <div class="fuera-mes"><span class="num">31</span></div>
+      <div class="dia"><span class="num">1</span></div>
+      <div class="dia"><span class="num">2</span><span class="evento examen">Examen CSS</span></div>
+      <div class="dia"><span class="num">3</span></div>
+      <div class="dia"><span class="num">4</span></div>
+      <div class="finde"><span class="num">5</span></div>
+      <div class="finde"><span class="num">6</span></div>
+      <div class="dia"><span class="num">7</span></div>
+      <div class="dia"><span class="num">8</span></div>
+      <div class="dia"><span class="num">9</span> <span class="evento entrega">Entrega Taller 2</span></div>
+      <div class="dia"><span class="num">10</span></div>
+      <div class="dia"><span class="num">11</span></div>
+      <div class="finde"><span class="num">12</span></div>
+      <div class="finde"><span class="num">13</span></div>
+      <div class="dia"><span class="num">14</span></div>
+      <div class="dia"><span class="num">15</span></div>
+      <div class="dia"><span class="num">16</span></div>
+      <div class="dia"><span class="num">17</span></div>
+      <div class="dia"><span class="num">18</span><span class="evento reunion">Reunion Académica</span></div>
+      <div class="finde"><span class="num">19</span></div>
+      <div class="finde"><span class="num">20</span></div>
+      <div class="dia"><span class="num">21</span></div>
+      <div class="dia-actual"><span class="num">22</span></div>
+      <div class="dia"><span class="num">23</span></div>
+      <div class="dia"><span class="num">24</span></div>
+      <div class="dia"><span class="num">25</span></div>
+      <div class="finde"><span class="num">26</span></div>
+      <div class="finde"><span class="num">27</span></div>
+      <div class="dia"><span class="num">28</span></div>
+      <div class="dia"><span class="num">29</span></div>
+       <div class="dia"><span class="num">30</span><span class="evento clase">Clase PosgreSQL</span></div>
+      <div class="fuera-mes"><span class="num">1</span></div>
+      <div class="fuera-mes"><span class="num">2</span></div>
+      <div class="fuera-mes finde"><span class="num">3</span></div>
+      <div class="fuera-mes finde"><span class="num">4</span></div>
+
+
+
+
+
+
+    </div>
+
+
+</section>
+
+</body>
+</html>

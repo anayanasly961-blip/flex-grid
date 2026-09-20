@@ -1,0 +1,730 @@
+*{margin: 0; 
+padding: 0; 
+box-sizing: border-box;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 50%;
+    animation: voltear 4s linear infinite; /* Aplica la animación de giro */
+    border: 2px solid #00d4ff; /* Borde de color dorado */
+}
+
+/*esta parte le da animación a el logo para que gire 360 grados de manera continua*/
+@keyframes voltear {
+  0%, 100% { transform: rotateY(0deg); }
+  50% { transform: rotateY(180deg); }
+}
+.animacion-voltear {
+  animation: voltear 3s ease-in-out infinite;
+}
+
+/* Contenedor principal de la barra */
+header {
+  display: flex;
+  justify-content: space-between; /* Separa el logo a la izquierda y los enlaces/botones a la derecha */
+  align-items: center;            /* Alinea verticalmente los elementos al centro */
+  padding: 1rem 2rem;
+  background-color: #1e293b;      
+  flex-wrap: wrap;                 /* Permite que los elementos pasen abajo si no caben */
+  gap: 1rem;                       /* Espacio uniforme entre elementos */
+}
+
+/* Contenedor interno para enlaces y botones */
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;            /* Espacio entre el <nav> y los botones */
+  flex-wrap: wrap;
+}
+
+/* Alineación de los enlaces dentro del <nav> */
+nav {
+  display: flex;
+  gap: 1rem;                       /* Espacio entre cada enlace */
+   text-shadow: 0 0 5px #dcb783; 
+}
+
+nav a {
+  color: #e2930b;
+  text-decoration: none;
+  font-weight: 500;
+  text-shadow: 0 0 5px #eeece8;      /* Sombra de texto */
+}
+nav a:hover {
+  color: #f1d8b4;                  /* Color al pasar el mouse */
+  text-decoration: underline;      /* Subrayado al pasar el mouse */
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0e0d0d, #047a92); /* Color de fondo azul más oscuro al pasar el mouse */
+  color: #ffffff; 
+}
+
+/* Botón - Registrarse */
+.uno {
+  background: linear-gradient(135deg, #019bb9, #055b95);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+  border: 1px solid #a1e1ed;
+}
+
+.uno:hover {
+  box-shadow: 0 6px 25px rgba(0, 212, 255, 0.45);
+  transform: translateY(-2px);
+}
+
+/* Botón - Iniciar sesión */
+.dos {
+  background: linear-gradient(135deg, #1A1A2E, #0A1628);
+  color: #00D4FF;
+  border: 1px solid #00D4FF;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dos:hover {
+  border-color: #00D4FF;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Cambia la dirección a columna */
+    align-items: center;    /* Centra los elementos */
+  }
+
+  .header-links {
+    flex-direction: column; /* Apila el nav y los botones */
+    width: 100%;
+  }
+
+  nav {
+    flex-wrap: wrap; /* Permite que los enlaces se acomoden */
+    justify-content: center;
+  }
+}
+
+/* PUNTO 2: DISEÑO DE TARJETAS */
+.seccion-cursos {
+  padding: 1rem;
+  background-color: #0b1120;
+  color: #ffffff;
+}
+.curso{
+  text-align: left;
+  color: #000000;
+  margin-top: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 0 5px #0d7cde; /* Sombra de texto */
+}
+/* Contenedor de las tarjetas */
+.grid-cursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Reorganización automática */
+  gap: 1.5rem; /* Espaciado entre tarjetas */
+  padding: 2rem;
+  background-color: #1c305e;
+}
+
+/* Estructura Flexbox interna de la tarjeta */
+.tarjeta {
+  background-color: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Alinea el contenido en columna */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tarjeta-contenido {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Permite que el contenedor ocupe todo el alto disponible */
+  gap: 0.75rem;
+  color: #ffffff;
+}
+
+/* Empuja el botón al final de la tarjeta */
+.btn-curso {
+  margin-top: auto; 
+  background-color: #00d4ff;
+  color: #0f172a;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* PUNTO 3 */
+.general-container {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header  header"
+    "sidebar main"
+    "footer  footer";
+  min-height: 100vh;
+  gap: 1rem;
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+/* Asignación de áreas a los componentes */
+.header { 
+  grid-area: header; 
+  background-color: #1e293b; 
+  padding: 1rem; display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  }
+
+.sidebar { 
+  grid-area: sidebar; 
+  background-color: #1e293b;
+  padding: 1rem;
+   }
+
+.main { 
+  grid-area: main; 
+  background-color: #1e293b;
+  padding: 1rem;
+  display: flex; 
+  flex-direction: column;
+  gap: 1.5rem; 
+   }
+
+.footer{
+   grid-area: footer;
+  background-color: #1e293b;
+  padding: 1rem;
+  text-align: center;
+  }
+
+/* Indicadores  */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background-color: #334155;
+  padding: 1rem;
+  border-radius: 6px; 
+  font-weight: bold; 
+  }
+
+/* Sidebar Nav */
+.sidebar nav { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.8rem; }
+
+.sidebar a {
+   color: #00d4ff;
+    text-decoration: none; 
+  }
+
+/* Responsive para Móvil (Redefinición de Áreas) */
+@media (max-width: 768px) {
+  .general-container {
+    grid-template-columns: 1fr;/* Una sola columna para pantallas pequeñas */
+    grid-template-areas:  /* definición de áreas para pantallas pequeñas */
+    "header"
+    "sidebar"
+    "main"
+    "footer";
+  }
+}
+/* Estilos para la Tabla donde están los estudiantes*/
+.seccion-tabla table {
+  width: 100%;
+  border-collapse: collapse; /* Elimina los espacios entre celdas */
+  margin-top: 0.5rem;
+}
+
+.seccion-tabla th, 
+.seccion-tabla td {
+  padding: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid #334155;
+}
+
+.seccion-tabla th {
+  background-color: #0f172a;
+  color: #00d4ff;
+  text-shadow: 0px 0 5px #616060; /* Sombra de texto */
+}
+
+/* Alineación de las tarjetas en filas */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.59rem;
+}
+
+/* Estilos para la sección de galeria Editorial*/
+.tecnologia{
+padding: 2rem;
+background-color: #0b1120;
+color:#ffffff;
+}
+h2{
+  text-align: left;
+  color: #00d4ff;
+  margin-top: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 0 5px #6d6d6c; /* Sombra de texto */
+}
+
+.galeria{
+ display:grid;
+ grid-template-columns: repeat(4, 1fr);
+ grid-auto-rows: 220px; /* Altura mínima de las tarjetas */
+ gap: 1rem; /* Espacio entre tarjetas */
+ margin-top: 1rem; /* Espacio superior */
+}
+
+/*distribucion del SPAN segun requisitos*/
+.grande{
+  grid-column: span 2; /* Ocupa dos columnas */
+  grid-row: span 2;    /* Ocupa dos filas */
+}
+
+.ancha{
+  grid-column: span 2; /* Ocupa dos columnas */
+}
+
+.larga{
+  grid-row: span 2;    /* Ocupa dos filas */
+}
+
+.article-not{
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background-color: #1e293b; /* Sombra para dar profundidad */
+}
+
+.article-not img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor */
+  transition: transform 0.4s ease; /* Transición suave para el efecto hover */
+  
+}
+
+.contenido2{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: background 0.3s ease; /* Transición suave para el efecto hover */
+ 
+  
+}
+
+.categoria-noticia{
+  font-size: 0.75rem;
+  color: #00d4ff;
+  text-shadow: 0px 0px 5px #616060; /* Sombra de texto */
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.contenido2 h3{
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin: 0.4rem 0;
+ transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.fecha{
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-shadow: 0px 0px 5px #616060; /* Sombra de texto */
+}
+
+
+.article-not:hover img{
+  transform: scale(1.08); /* Aumenta el tamaño de la imagen al pasar el mouse */
+} 
+
+.article-not:hover .contenido2{
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(42, 42, 42, 0.2) 100%); /* Oscurece el fondo al pasar el mouse */
+}
+
+.article-not:hover .contenido2 h3{
+  color: #95f82b;
+  text-shadow: 2px 0 0 rgba(0, 0, 0, 0.6);
+  transform: translateY(-2px); /* Mueve el título hacia arriba */
+ 
+}
+
+.contenido2:hover span{
+ color: #fbbf24;
+  text-shadow: 2px 2px black;
+   
+}
+
+@media (max-width: 900px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas para pantallas pequeñas */
+  }
+
+  .grande, .ancho, .larga {
+    grid-column: span 1; /* Ocupa dos columnas en pantallas pequeñas*/
+    grid-row: span 1; /* Ocupa una fila en pantallas pequeñas */
+    }
+  }
+
+  @media (max-width: 500px) {
+    .galeria {
+      grid-template-columns: 1fr; /* Una columna para pantallas muy pequeñas */
+    }
+  }
+  
+
+  /* Estilos para la sección de página producto */
+  
+  .pag{
+  background-color: #0A1628;
+  text-align: center;
+  color: #00d4ff;
+  margin-top: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 0 5px #6d6d6c; /* Sombra de texto */
+}
+
+
+.principal {
+  padding: 3rem 2rem;
+  background-color: #0f172a;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-producto {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  max-width: 1100px;
+  width: 100%;
+  background-color: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Columna Izquierda Ajustada */
+.galeriap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1; /* Ocupa el 50% */
+}
+
+.imagen-principal img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 25px;
+  border: 1px solid whitesmoke;
+  
+}
+
+.miniaturas{
+  display:flex;
+  gap: 1rem;
+}
+
+.miniaturas img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.miniaturas img:hover {
+  border-color: #2dd806;
+  transform: translateY(-2px);
+}
+
+/* Columna Derecha Ajustada */
+.producto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex:1; /* Ocupa el otro 50% */
+
+}
+
+.marca {
+  color: #686969;
+  font-size: 0.85rem;
+}
+
+.marca strong {
+  color: #00cff8;
+}
+
+.calificacion {
+  display: flex;
+  gap: 0.9rem;
+  font-size: 1rem;
+}
+
+.promedio {
+  font-weight: bold;
+  
+}
+
+.resenas {
+  color: #94a3b8;
+}
+
+.precios {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.precio-actual { 
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3ec90c;
+  text-shadow: 1px 0 black;
+}
+
+.precio-anterior {
+  font-size: 1.1rem;
+  color: #cd7810;
+  text-decoration:line-through;
+}
+
+.descripcion {
+  color: #b8b8b9;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.especificaciones h4 {
+  margin-bottom: 0.5rem;
+  color: #00d4ff;
+}
+
+.especificaciones ul {
+  padding-left: 1.2rem;
+  color: #e2e9f2;
+  font-size: 0.9rem;
+}
+
+.opciones {
+  display: flex;
+  gap: 2rem;
+}
+
+.selector-opcion {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#color, #cantidad {
+  padding: 0.4rem;
+  border-radius: 8px;
+  border: 1px solid #00d4ff;
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+#color {
+   width: 120px;
+   text-align: center;
+   }
+
+#cantidad { 
+  width: 80px; 
+  text-align: center; }
+
+.botones {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-comprar, .btn-carrito {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+ 
+}
+
+.btn-comprar {
+  background-color: #66c303;
+  color: #0f172a;
+}
+
+.btn-carrito {
+  background: linear-gradient(135deg, #019bb9, #055b95);
+  color: #ffffff;
+}
+
+.btn-comprar:hover, .btn-carrito:hover {
+  transform: translateY(-2px);
+  border:0.2px solid white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedor-producto {
+    flex-direction: column;
+  }
+}
+
+/*CALENDARIO MENSUAL*/
+
+.mes{
+  font-family: cursive;
+  font-size: 30px;
+}
+.contenedor-calendario{
+  padding: 1rem;
+  background-color: #1e293b;
+  color: #ffffff;
+  border-radius: 8px;
+
+}
+
+.boton-head{
+background: linear-gradient(145deg, #121e31, #1b2d39);
+color: white;
+border-radius: 8px;
+width: 115px;
+height: 25px;
+}
+
+.boton-head a:hover{
+background: linear-gradient(135deg, #1b293e, #03273d);
+color: white;
+}
+
+.opcion-mes{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calendario{
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  gap: 4px;
+}
+
+.nom{
+  background-color: #0f172a;
+  padding: 0.5rem;
+  text-align: center;
+  flex-direction: column;
+}
+
+.finded{
+  background-color: #293a62;;
+}
+.dia{
+  background-color: #334155;
+  min-height: 80px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dia-actual{
+  border: 2px solid #00d4ff;
+  background-color: #1e293b;
+}
+
+.fuera-mes{
+  background-color: #46566c;;
+}
+.finde{
+  background-color: #394556;
+}
+
+.evento{
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.evento.examen{
+  background-color: #ef4444;
+}
+
+.evento.entrega{
+  background-color: #f59e0b;
+}
+
+.evento.reunion{
+  background-color: #10b981;
+}
+
+.evento.clase{
+  background-color: #3b82f6;
+}
+
+@media(max-width: 600px){
+  .dia{
+    min-height: 50px;
+
+font-size: 0.75rem; 
+ }
+ .evento{
+  display: none;
+ }
+}
